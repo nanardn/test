@@ -1,4 +1,5 @@
 @extends('template')
+@section('title','Daftar Pendanaan')
 
 @section('content')
 
@@ -26,42 +27,25 @@
                     </div>
 
                     <div class="col-md-12 element">
-                        <table id="example" class="datatable table table-bordered" >
-                            <thead>
-                                <tr>
-                                    <th>Proyek</th>
-                                    <th>Penanggung Jawab</th>
-                                    <th>Kategori</th>
-                                    <th>Total Dana</th>
-                                    <th>Terkumpul</th>
-                                    <th>Action</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                     		 <?php
-								$angka = "0";
-								$jumlah_desimal ="2";
-								$pemisah_desimal =",";
-								$pemisah_ribuan =".";
-								?>
-                               <?php
-                               		foreach ($dana as $row) {
-                               ?> <tr>
-                               	<td><?php echo $row->nama_proyek  ?></td>
-                               	<td><?php echo $row->nama_pj ?></td>
-                               	<td><?php echo $row->kategori ?></td>
-                               	<td><?php 
-                               		$angka=($row->total_dana);
-                               		echo "Rp ".number_format($angka,$jumlah_desimal,$pemisah_desimal,$pemisah_ribuan); ?></td>
-                               	<td><?php $angka=($row->sementara_dana);
-                               		echo "Rp ".number_format($angka,$jumlah_desimal,$pemisah_desimal,$pemisah_ribuan); ?></td>
-                               		<td><a href="<?php echo 'EditProduct/'.$row->id?>">Edit</a> | <a href="<?php echo '/DetailJe/'.$row->id?>">Detail</a></td>
-                               </tr>
-
-                               <?php } ?>
-                            </tbody>
-                        </table>
+                      <form action="{{action('daftarCrowdController@save')}}" method="post"> 
+                          <input type="hidden" name ="_token" value="<?=csrf_token(); ?>">
+                          Nama Penanggung Jawab
+                          <input type="text" name="nama_pj" class="form-control">
+                          Nama Proyek
+                          <input type="text" name="nama_proyek" class="form-control">
+                          Kategori
+                          <input type="text" name="kategori" class="form-control">
+                          Dana yang Diajukan
+                          <input type="text" name="total_dana" class="form-control">
+                          Deskripsi Proyek
+                          <input type="text" name="deskripsi" class="form-control">
+                          Foto Proyek
+                          <input type="text" name="foto_proyek" class="form-control">
+                          Foto Penanggung Jawab
+                          <input type="text" name="foto_pj" class="form-control">
+                          <br/>
+                          <input type="submit" value="Daftar" class="btn btn-primary"></input>
+                      </form>
                     </div>
                 </div>
                 <!-- /.row -->

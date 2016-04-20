@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-
+<p style="color:red"><?php echo Session::get('message'); ?></p>
         <div id="main-content">
                 <!-- breadcrumb -->
                 <div class="row" >
