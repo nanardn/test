@@ -44,7 +44,7 @@
                             Penggalangan Dana
                         </a>
                         <ul class="collapse sublinks" id="data">
-                            <li><a href="#">Daftar Penggalangan</a></li>
+                            <li><a href="{{URL::to('/daftarCrowd')}}">Daftar Penggalangan</a></li>
                             <li><a href="{{URL::to('/listCrowd')}}">List Penggalangan</a></li>
                             
                             
