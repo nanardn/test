@@ -22,3 +22,4 @@ Route::get('/listCrowd', 'listCrowdController@show');
 Route::get('/daftarCrowd', 'daftarCrowdController@form');
 //Route::get('listCrowd','listCrowdController');
 Route::post('save','daftarCrowdController@save');
+Route::get('/listCrowd', 'daftarCrowdController@save');
