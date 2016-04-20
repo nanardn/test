@@ -19,33 +19,37 @@
                         <h1>Pengajuan Penggalangan Dana</h1>
                         <div class="toolbar form-inline pull-right">
                             <div class="form-group search">
-                                <input type="text" class="form-control" id="filter" placeholder='Cari Buku Besar...'/>
+                                <input type="text" class="form-control" id="filter" placeholder='Cari Laporan...'/>
                                 <i class="fa fa-search icon"></i>
                             </div>
-                            <a href="#laporan.html" type="button" class="btn custom2 table-button btn-success btn-xs form-control">Buku Besar Baru</a>
+                            <a href="#laporan.html" type="button" class="btn custom2 table-button btn-success btn-xs form-control">Laporan Baru</a>
                         </div>
                     </div>
 
                     <div class="col-md-12 element">
-                      <form action="{{action('daftarCrowdController@save')}}" method="post"> 
-                          <input type="hidden" name ="_token" value="<?=csrf_token(); ?>">
-                          Nama Penanggung Jawab
-                          <input type="text" name="nama_pj" class="form-control">
-                          Nama Proyek
-                          <input type="text" name="nama_proyek" class="form-control">
-                          Kategori
-                          <input type="text" name="kategori" class="form-control">
-                          Dana yang Diajukan
-                          <input type="text" name="total_dana" class="form-control">
-                          Deskripsi Proyek
-                          <input type="text" name="deskripsi" class="form-control">
-                          Foto Proyek
-                          <input type="file" name="foto_proyek" class="form-control">
-                          Foto Penanggung Jawab
-                          <input type="file" name="foto_pj" class="form-control">
-                          <br/>
-                          <input type="submit" value="Daftar" class="btn btn-primary"></input>
-                      </form>
+                      <table id="example" class="datatable table table-bordered" >
+                            <thead>
+                                <tr>
+                                    <th>Kepada</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bank BNI Syariah</td>
+                                    <td>Menunggu Balasan</td>
+                                    <td class="button-col">
+                                        <a href="#" type="button" class="btn custom2 table-button btn-primary btn-xs ">Detail</a>
+                                        <a href="ubah_perusahaan.html" type="button" class="btn custom2 table-button btn-grey btn-xs ">Ubah</a>
+                                        <a href="#" type="button" class="btn custom2 table-button btn-danger btn-xs ">Hapus</a>
+                                    </td>
+                                    
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <!-- /.row -->

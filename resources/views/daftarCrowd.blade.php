@@ -27,8 +27,13 @@
                           <input type="text" name="nama_pj" class="form-control">
                           Nama Proyek
                           <input type="text" name="nama_proyek" class="form-control">
-                          Kategori
-                          <input type="text" name="kategori" class="form-control">
+                                <label for="kategori">Kategori</label>
+                                <select class="form-control" id="kategoriDaftar">
+                                  <option>Zakat</option>
+                                  <option>Infaq</option>
+                                  <option>Sadaqah</option>
+                                  <option>Wakaf</option>
+                                </select>
                           Dana yang Diajukan
                           <input type="text" name="total_dana" class="form-control">
                           Deskripsi Proyek
