@@ -46,7 +46,7 @@
                         <ul class="collapse sublinks" id="data">
                             <li><a href="{{URL::to('/daftarCrowd')}}">Daftar Penggalangan</a></li>
                             <li><a href="{{URL::to('/listCrowd')}}">List Penggalangan</a></li>
-                            
+                            <li><a href="{{URL::to('/laporanPendanaan')}}">Laporan Penggalangan</a></li>
                             
                         </ul>
                     </li>

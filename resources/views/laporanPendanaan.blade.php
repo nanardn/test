@@ -17,7 +17,13 @@
                 <div class="row" >
                     <div class="main-title clearfix">
                         <h1>Pengajuan Penggalangan Dana</h1>
-                        
+                        <div class="toolbar form-inline pull-right">
+                            <div class="form-group search">
+                                <input type="text" class="form-control" id="filter" placeholder='Cari Buku Besar...'/>
+                                <i class="fa fa-search icon"></i>
+                            </div>
+                            <a href="#laporan.html" type="button" class="btn custom2 table-button btn-success btn-xs form-control">Buku Besar Baru</a>
+                        </div>
                     </div>
 
                     <div class="col-md-12 element">
