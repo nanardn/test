@@ -19,6 +19,11 @@ class daftarCrowdController extends Controller
     public function form(){
     	return view('daftarCrowd');
     }
+    /*public function store(Request $data){
+        $validation = Validator::make($data->all(), $array(
+            ''  
+            ))
+    }*/
     public function save(Request $request){
     	$post = $request-> all();
     	$v 	= \Validator::make($request->all(),
@@ -28,11 +33,11 @@ class daftarCrowdController extends Controller
     			'kategori'=> 'required',
     			'total_dana'=> 'required',
     			'deskripsi'=> 'required',
-    			'foto_proyek'=> 'required',
-    			'foto_pj'=> 'required',
+    			'foto_proyek'=> 'required|mimes:jpeg,png|max:100',
+    			'foto_pj'=> 'required|mimes:jpg,jpeg|max:100',
     		]);
     	if($v->fails()){
-    		return redirect()->back()->withErrors($v->$errors());
+    		return redirect()->back()->withErrors($v->errors());
     	}
     	else{
     		$data = array(
