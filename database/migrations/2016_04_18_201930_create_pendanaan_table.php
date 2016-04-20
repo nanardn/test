@@ -13,7 +13,7 @@ class CreatePendanaanTable extends Migration
     public function up()
     {
         Schema::create('pendanaan', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_pendanaan');
             $table->string('nama_pj');
             $table->string('nama_proyek');
             $table->string('kategori');

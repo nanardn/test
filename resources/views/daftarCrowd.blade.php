@@ -40,9 +40,9 @@
                           Deskripsi Proyek
                           <input type="text" name="deskripsi" class="form-control">
                           Foto Proyek
-                          <input type="text" name="foto_proyek" class="form-control">
+                          <input type="file" name="foto_proyek" class="form-control">
                           Foto Penanggung Jawab
-                          <input type="text" name="foto_pj" class="form-control">
+                          <input type="file" name="foto_pj" class="form-control">
                           <br/>
                           <input type="submit" value="Daftar" class="btn btn-primary"></input>
                       </form>

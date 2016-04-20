@@ -47,7 +47,7 @@ class daftarCrowdController extends Controller
     		$i =DB ::table('pendanaan')-> insert($data);
     		if($i>0){
     			\Session::flash('message','Record Have  been save success');
-    			return redirect('lisCrowd');
+    			return redirect('listCrowd');
     		}
     	}
     }
